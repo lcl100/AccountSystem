@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountSystem.controller.MemoCheckFrameController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="91.0" prefWidth="600.0" spacing="50.0">
+            <children>
+                <TextField fx:id="memo_memoTextField" promptText="请填入备注："/>
+                <Button fx:id="memo_checkButton" mnemonicParsing="false" onAction="#memo_checkButtonEvent" text="查询"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutY="91.0" prefHeight="20.0" prefWidth="600.0">
+            <children>
+                <Separator prefHeight="2.0" prefWidth="598.0"/>
+            </children>
+        </HBox>
+        <TableView fx:id="memo_tableView" layoutY="111.0" prefHeight="500.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="memo_idColumn" prefWidth="60.0" text="序号"/>
+                <TableColumn fx:id="memo_typeColumn" prefWidth="71.0" text="类型"/>
+                <TableColumn fx:id="memo_moneyColumn" prefWidth="63.0" text="金额"/>
+                <TableColumn fx:id="memo_classificationColumn" prefWidth="108.0" text="分类"/>
+                <TableColumn fx:id="memo_memoColumn" prefWidth="161.0" text="备注"/>
+                <TableColumn fx:id="memo_dateColumn" prefWidth="125.0" text="日期"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

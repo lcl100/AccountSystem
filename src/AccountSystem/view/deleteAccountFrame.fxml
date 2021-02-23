@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.DeleteAccountFrameController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="序号："/>
+                        <TextField fx:id="idTextField" promptText="请填入账目记录的序号："/>
+                    </children>
+                </HBox>
+            </top>
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="checkButton" mnemonicParsing="false" onAction="#checkButtonEvent" text="查询"/>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonEvent" text="删除"/>
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="contentLabel"/>
+                    </children>
+                </HBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

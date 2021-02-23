@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.ReportFrameController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE"
+                 tabMaxHeight="200.0" tabMaxWidth="500.0">
+            <tabs>
+                <Tab text="日报告">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="361.0" prefWidth="600.0">
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <Label fx:id="thisDayBalanceLabel" text="余额"/>
+                                                        <Label fx:id="thisDayBalanceShowLabel" prefWidth="150.0"
+                                                               textFill="#8bc065">
+                                                            <font>
+                                                                <Font size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <center>
+                                        <PieChart fx:id="thisDayPieChart" BorderPane.alignment="CENTER"/>
+                                    </center>
+                                    <left>
+                                        <VBox alignment="CENTER" prefHeight="229.0" prefWidth="136.0" spacing="10.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="thisDayOutputLabel" text="本日支出"/>
+                                                <Label fx:id="thisDayOutputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="thisDayInputLabel" text="本日收入"/>
+                                                <Label fx:id="thisDayInputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <top>
+                                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ComboBox fx:id="thisDayComboBox" onAction="#thisDayComboBoxEvent"
+                                                          prefWidth="150.0"/>
+                                            </children>
+                                        </VBox>
+                                    </top>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="周报告">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="361.0" prefWidth="600.0">
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <Label fx:id="thisWeekBalanceLabel" text="余额"/>
+                                                        <Label fx:id="thisWeekShowBalanceLabel" prefWidth="150.0"
+                                                               textFill="#8bc065">
+                                                            <font>
+                                                                <Font size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <center>
+                                        <PieChart fx:id="thisWeekPieChart" BorderPane.alignment="CENTER"/>
+                                    </center>
+                                    <left>
+                                        <VBox alignment="CENTER" prefHeight="229.0" prefWidth="136.0" spacing="10.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="thisWeekOutputLabel" text="本周支出"/>
+                                                <Label fx:id="thisWeekOutputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="thisWeekInputLabel" text="本周收入"/>
+                                                <Label fx:id="thisWeekInputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <top>
+                                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ComboBox fx:id="thisWeekComboBox" onAction="#thisWeekComboBoxEvent"
+                                                          prefWidth="150.0"/>
+                                            </children>
+                                        </VBox>
+                                    </top>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="月报告">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="361.0" prefWidth="600.0">
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <Label fx:id="thisMonthBalanceLabel" text="余额"/>
+                                                        <Label fx:id="thisMonthBalanceShowLabel" prefWidth="150.0"
+                                                               textFill="#8bc065">
+                                                            <font>
+                                                                <Font size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <center>
+                                        <PieChart fx:id="thisMonthPieChart" BorderPane.alignment="CENTER"/>
+                                    </center>
+                                    <left>
+                                        <VBox alignment="CENTER" prefHeight="261.0" prefWidth="136.0" spacing="20.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="thisMonthOutputLabel" text="本月支出"/>
+                                                <Label fx:id="thisMonthOutputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="thisMonthInputLabel" text="本月收入"/>
+                                                <Label fx:id="thisMonthInputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <top>
+                                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ComboBox fx:id="thisMonthComboBox" onAction="#thisMonthComboBoxEvent"
+                                                          prefWidth="150.0"/>
+                                            </children>
+                                        </VBox>
+                                    </top>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="季度报告">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="361.0" prefWidth="600.0">
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <Label fx:id="thisSeasonBalanceLabel" text="余额"/>
+                                                        <Label fx:id="thisSeasonBalanceShowLabel" prefWidth="150.0"
+                                                               textFill="#8bc065">
+                                                            <font>
+                                                                <Font size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <center>
+                                        <PieChart fx:id="thisSeasonPieChart" BorderPane.alignment="CENTER"/>
+                                    </center>
+                                    <left>
+                                        <VBox alignment="CENTER" prefHeight="261.0" prefWidth="136.0" spacing="20.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="thisSeasonOutputLabel" text="本季度支出"/>
+                                                <Label fx:id="thisSeasonOutputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="thisSeasonInputLabel" text="本季度收入"/>
+                                                <Label fx:id="thisSeasonInputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <top>
+                                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ComboBox fx:id="thisSeasonComboBox" onAction="#thisSeasonComboBoxEvent"
+                                                          prefWidth="150.0"/>
+                                            </children>
+                                        </VBox>
+                                    </top>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="年报告">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="361.0" prefWidth="600.0">
+                                    <bottom>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <Label fx:id="thisYearBalanceLabel" text="余额"/>
+                                                        <Label fx:id="thisYearBalanceShowLabel" prefWidth="150.0"
+                                                               textFill="#8bc065">
+                                                            <font>
+                                                                <Font size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <center>
+                                        <PieChart fx:id="thisYearPieChart" BorderPane.alignment="CENTER"/>
+                                    </center>
+                                    <left>
+                                        <VBox alignment="CENTER" prefHeight="261.0" prefWidth="136.0" spacing="20.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="thisYearOutputLabel" text="本年支出"/>
+                                                <Label fx:id="thisYearOutputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="thisYearInputLabel" text="本年收入"/>
+                                                <Label fx:id="thisYearInputShowLabel" textFill="#8bc065">
+                                                    <font>
+                                                        <Font size="30.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <top>
+                                        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0"
+                                              BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ComboBox fx:id="thisYearComboBox" onAction="#thisYearComboBoxEvent"
+                                                          prefWidth="150.0"/>
+                                            </children>
+                                        </VBox>
+                                    </top>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

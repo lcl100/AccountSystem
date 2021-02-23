@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountSystem.controller.LogupFrameController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="371.0" prefWidth="327.0" spacing="20.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/welcome.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="12.0" prefWidth="327.0" spacing="15.0">
+                    <children>
+                        <Label fx:id="nameLabel" contentDisplay="CENTER" styleClass="class_label" text="昵称："
+                               textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS"/>
+                        <TextField fx:id="nameTextField" promptText="请填入您的昵称：" styleClass="class_textField"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="0.0" prefWidth="327.0" spacing="15.0">
+                    <children>
+                        <Label fx:id="passwordLabel" contentDisplay="CENTER" styleClass="class_label" text="密码："
+                               textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS"/>
+                        <PasswordField fx:id="passwordTextField" promptText="请填入您的密码：" styleClass="class_textField"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="21.0" prefWidth="327.0" spacing="25.0">
+                    <children>
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonEvent"
+                                styleClass="class_button" text="注册"/>
+                        <Button fx:id="logupButton" mnemonicParsing="false" onAction="#logupButtonEvent"
+                                styleClass="class_button" text="登录"/>
+                    </children>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+        </VBox>
+    </children>
+</HBox>
+
+

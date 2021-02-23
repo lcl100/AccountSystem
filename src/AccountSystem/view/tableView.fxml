@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.TableViewController">
+    <children>
+        <TableView fx:id="check_tableView" editable="true" layoutY="1.0" prefHeight="600.0" prefWidth="600.0"
+                   tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="check_idColumn" minWidth="100.0" prefWidth="-1.0" text="序号"/>
+                <TableColumn fx:id="check_typeColumn" minWidth="100.0" prefWidth="-1.0" text="类型"/>
+                <TableColumn fx:id="check_moneyColumn" minWidth="100.0" prefWidth="-1.0" text="金额"/>
+                <TableColumn fx:id="check_classificationColumn" minWidth="100.0" prefWidth="-1.0" text="分类"/>
+                <TableColumn fx:id="check_memoColumn" minWidth="100.0" prefWidth="-1.0" text="备注"/>
+                <TableColumn fx:id="check_dateColumn" minWidth="100.0" prefWidth="-1.0" text="日期"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

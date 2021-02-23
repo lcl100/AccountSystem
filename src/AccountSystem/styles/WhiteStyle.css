@@ -1,0 +1,313 @@
+/*设置全局样式*/
+.root {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 16px;
+}
+
+/*设置按钮的样式*/
+.button {
+    -fx-background-color: #FDFDFE;
+    -fx-border-color: #3C3F41;
+    -fx-text-fill: #3C3F41;
+    -fx-border-radius: 2px;
+    -fx-padding: 5 25 5 25;
+}
+
+/*按钮获得焦点时的样式*/
+.button:focused {
+    -fx-background-color: #365880;
+    -fx-text-fill: #3C3F41;
+    -fx-border-color: #3C3F41;
+    -fx-font-weight: bold;
+}
+
+/*标签的样式*/
+.label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #3C3F41;
+}
+
+/*文本框的样式*/
+.text-field {
+    -fx-background-color: #4C5052;
+    -fx-border-color: #3C3F41;
+    -fx-text-fill: #3C3F41;
+    -fx-border-radius: 2px;
+    -fx-prompt-text-fill: #3C3F41;
+}
+
+/*文本框获得焦点时的样式*/
+.text-field:focused {
+    -fx-background-color: #FDFDFE;
+    -fx-border-width: 2px;
+    -fx-border-color: #365880;
+}
+
+/*密码框的样式*/
+.password-field {
+    -fx-background-color: #FDFDFE;
+    -fx-border-color: #3C3F41;
+    -fx-text-fill: #3C3F41;
+    -fx-border-radius: 2px;
+    -fx-prompt-text-fill: #3C3F41;
+}
+
+/*密码框获得焦点时的样式*/
+.password-field:focused {
+    -fx-background-color: #FDFDFE;
+    -fx-border-width: 2px;
+    -fx-border-color: #365880;
+}
+
+/*菜单条的样式*/
+.menu-bar {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*菜单样式*/
+.menu {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+    -fx-border: null;
+}
+
+/*菜单获得焦点时的样式*/
+.menu:focused {
+    -fx-background-color: #365880;
+}
+
+/*菜单项的样式*/
+.menu-item {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*菜单项获得焦点时的样式*/
+.menu-item:focused {
+    -fx-background-color: #365880;
+}
+
+/*单选按钮的样式*/
+.radio-button {
+    -fx-text-fill: #3C3F41;
+}
+
+/*下拉列表框的样式*/
+.combo-box {
+    -fx-text-fill: #3C3F41;
+    -fx-background-color: #FDFDFE;
+    -fx-border-color: #3C3F41;
+}
+
+/*下拉列表框的颜色*/
+.combo-box .list-cell {
+    -fx-background-color: #3C3F41;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-border-color: #FDFDFE;
+}
+
+/*当鼠标放在下拉箭头处的样式*/
+.combo-box-base:hover {
+    -fx-color: #3C3F41;
+}
+
+/*选中下拉列表框的项时的样式*/
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #365880;
+    -fx-text-fill: #3C3F41;
+}
+
+/*文本域的样式*/
+.text-area {
+    -fx-background-color: #FDFDFE;
+    -fx-border-color: #3C3F41;
+    -fx-prompt-text-fill: #3C3F41;
+}
+
+/*文本域获得焦点时的样式*/
+.text-area:focused {
+    -fx-border-color: #365880;
+    -fx-border-width: 1px;
+}
+
+/*日期选择器的样式*/
+.date-picker {
+    -fx-border-color: #3C3F41;
+    -fx-text-fill: #3C3F41;
+}
+
+/*设置表格头靠左、字体大小，字体颜色*/
+.table-view .column-header .label {
+    -fx-alignment: center;
+    -fx-text-fill: #3C3F41;
+    -fx-font-size: 18px;
+    -fx-background-color: #FDFDFE;
+}
+
+/*设置表格头高度*/
+.table-view > .column-header-background {
+    -fx-pref-height: 40;
+}
+
+/*设置表格视图的样式*/
+.table-view {
+    -fx-base: #FDFDFE; /*设置的是表格视图的中的分割条的颜色*/
+    -fx-background-size: 1px;
+    -fx-control-inner-background: #2B2B2B; /*设置的表格视图中的所有行的颜色*/
+    -fx-table-cell-border-color: transparent; /*设置的是表格视图中的单元格分割线的颜色*/
+    -fx-padding: 5;
+}
+
+/*设置每一列内容居中，每一行高度*/
+.table-row-cell {
+    -fx-cell-size: 45px;
+    -fx-alignment: center;
+}
+
+/*设置每一列内容居中*/
+.table-view .table-column {
+    -fx-alignment: center;
+}
+
+/*表格视图的样式*/
+.table-view {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*表格视图的表头的样式*/
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #3C3F41;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+/*表格视图中表格行被选中时的样式*/
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #3C3F41;
+    -fx-text-fill: #FDFDFE;
+}
+
+/*选项卡面板的样式*/
+.tab-pane {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*当鼠标放置在选项卡上时的样式*/
+.tab:hover {
+    -fx-background-color: #3C3F41;
+    -fx-text-fill: #FDFDFE;
+}
+
+.tab:selected {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*tab选项卡面板的选项卡的背景色*/
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #FDFDFE;
+}
+
+/*图表的样式*/
+.chart {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*设置X轴和Y轴的标题标签*/
+.chart .axis-label {
+    -fx-text-fill: #3C3F41;
+}
+
+/*X轴和Y轴的数据值标签的样式*/
+.axis {
+    -fx-tick-length: 10;
+    -fx-tick-label-fill: #3C3F41;
+    -fx-tick-mark-visible: true;
+    -fx-tick-labels-visible: true;
+}
+
+/*设置分类标签的样式*/
+.chart-legend {
+    -fx-text-fill: #3C3F41;
+}
+
+/*设置饼图标签线的样式*/
+.chart-pie-label-line {
+    -fx-stroke: #3C3F41;
+    -fx-fill: #3C3F41;
+}
+
+/*设置饼图的标签样式*/
+.chart-pie-label {
+    -fx-fill: #3C3F41;
+    -fx-font-size: 1em;
+}
+
+/*设置图表标题的样式*/
+.chart-title {
+    -fx-text-fill: #3C3F41;
+}
+
+/*列表视图的样式*/
+.list-view {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*设置列表视图的选项的样式*/
+.list-cell {
+    -fx-background-color: #3C3F41;
+    -fx-text-fill: #FDFDFE;
+}
+
+.list-cell:selected {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*列表视图获得焦点时的样式*/
+.list-view:focused {
+    -fx-background-color: #365880;
+    -fx-text-fill: #3C3F41;
+}
+
+/*复选框的样式*/
+.check-box {
+    -fx-text-fill: #3C3F41;
+}
+
+/*复选框获得焦点时的样式*/
+.check-box:focused {
+    -fx-border-color: #365880;
+    -fx-border-width: 1px;
+}
+
+/*超链接访问后的样式*/
+.hyperlink:visited {
+    -fx-text-fill: #3C3F41;
+}
+
+/*滚动面板的样式*/
+.split-pane {
+    -fx-background-color: #FDFDFE;
+    -fx-text-fill: #3C3F41;
+}
+
+/*分隔线的样式*/
+.separator {
+    -fx-background-color: #FDFDFE;
+}
+
+/*弹出菜单面板*/
+.context-menu {
+    -fx-background-color: derive(#1d1d1d, 50%);
+}

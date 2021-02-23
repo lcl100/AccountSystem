@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.ClassificationCheckFrameController">
+    <children>
+        <TabPane prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="收入">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="input_classification_tableView" layoutY="86.0" prefHeight="500.0"
+                                           prefWidth="600.0">
+                                    <columns>
+                                        <TableColumn fx:id="classification_idColumn" prefWidth="60.0" text="序号"/>
+                                        <TableColumn fx:id="classification_typeColumn" prefWidth="71.0" text="类型"/>
+                                        <TableColumn fx:id="classification_moneyColumn" prefWidth="63.0" text="金额"/>
+                                        <TableColumn fx:id="classification_classificationColumn" prefWidth="108.0"
+                                                     text="分类"/>
+                                        <TableColumn fx:id="classification_memoColumn" prefWidth="161.0" text="备注"/>
+                                        <TableColumn fx:id="classification_dateColumn" prefWidth="125.0" text="日期"/>
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutY="71.0" prefHeight="20.0" prefWidth="600.0">
+                                    <children>
+                                        <Separator prefHeight="20.0" prefWidth="602.0"/>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0" spacing="50.0">
+                                    <children>
+                                        <Label text="请选择分类："/>
+                                        <ComboBox fx:id="inputClassificationComboBox"
+                                                  onAction="#inputClassificationComboBoxEvent" prefWidth="200.0"
+                                                  promptText="请选择收入分类："/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="支出">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="output_classification_tableView" editable="true" layoutY="86.0"
+                                           prefHeight="500.0" prefWidth="600.0" tableMenuButtonVisible="true">
+                                    <columns>
+                                        <TableColumn fx:id="classification_idColumn2" prefWidth="60.0" text="序号"/>
+                                        <TableColumn fx:id="classification_typeColumn2" prefWidth="71.0" text="类型"/>
+                                        <TableColumn fx:id="classification_moneyColumn2" prefWidth="63.0" text="金额"/>
+                                        <TableColumn fx:id="classification_classificationColumn2" prefWidth="105.0"
+                                                     text="分类"/>
+                                        <TableColumn fx:id="classification_memoColumn2" prefWidth="164.0" text="备注"/>
+                                        <TableColumn fx:id="classification_dateColumn2" prefWidth="125.0" text="日期"/>
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutY="71.0" prefHeight="20.0" prefWidth="600.0">
+                                    <children>
+                                        <Separator prefHeight="20.0" prefWidth="602.0"/>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0" spacing="50.0">
+                                    <children>
+                                        <Label text="请选择分类："/>
+                                        <ComboBox fx:id="outputClassificationComboBox"
+                                                  onAction="#outputClassificationComboBoxEvent" prefHeight="30.0"
+                                                  prefWidth="200.0" promptText="请选择支出分类："/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

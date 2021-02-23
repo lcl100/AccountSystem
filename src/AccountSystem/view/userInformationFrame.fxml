@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.UserInformationFrameController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="userImage" fitHeight="143.0" fitWidth="118.0"
+                                   onMouseClicked="#alterImageViewEvent" pickOnBounds="true" preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label text="名    字"/>
+                        <TextField fx:id="nameTextField"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label text="账号ID"/>
+                        <TextField fx:id="idTextField" prefHeight="30.0" prefWidth="193.0"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="618.0" spacing="50.0">
+                    <children>
+                        <Label text="密    码"/>
+                        <PasswordField fx:id="passwordTextField" prefHeight="30.0" prefWidth="186.0"/>
+                        <CheckBox fx:id="alterPasswordCheckBox" mnemonicParsing="false"
+                                  onAction="#alterPasswordCheckBoxEvent" text="修改密码"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="160.0"/>
+                    </VBox.margin>
+                </HBox>
+                <VBox fx:id="alterPasswordVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0"
+                      visible="false">
+                    <children>
+                        <Separator prefWidth="200.0"/>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                            <children>
+                                <Label text="新密码"/>
+                                <PasswordField fx:id="newPasswordTextField"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                            <children>
+                                <Label text="确认密码"/>
+                                <PasswordField fx:id="confirmNewPasswordTextField"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                            <children>
+                                <Button fx:id="alterButton" mnemonicParsing="false" onAction="#alterButtonEvent"
+                                        text="修改"/>
+                                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonEvent"
+                                        text="取消"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

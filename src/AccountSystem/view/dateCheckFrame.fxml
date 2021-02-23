@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.DateCheckFrameController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="610.0" spacing="20.0">
+            <children>
+                <Label text="从："/>
+                <DatePicker fx:id="startDatePicker" prefHeight="30.0" prefWidth="160.0" promptText="请选中起始日期："/>
+                <Label text="到："/>
+                <DatePicker fx:id="endDatePicker" prefWidth="160.0" promptText="请选择终止日期："/>
+                <Button fx:id="dateCheckButton" mnemonicParsing="false" onAction="#dateCheckButtonEvent" text="查询"/>
+            </children>
+        </HBox>
+        <HBox layoutY="85.0" prefHeight="24.0" prefWidth="610.0">
+            <children>
+                <Separator prefHeight="126.0" prefWidth="611.0"/>
+            </children>
+        </HBox>
+        <TableView fx:id="check_tableView" editable="true" layoutY="108.0" prefHeight="503.0" prefWidth="610.0"
+                   tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="check_idColumn" minWidth="100.0" prefWidth="-1.0" text="序号"/>
+                <TableColumn fx:id="check_typeColumn" minWidth="100.0" prefWidth="-1.0" text="类型"/>
+                <TableColumn fx:id="check_moneyColumn" minWidth="100.0" prefWidth="-1.0" text="金额"/>
+                <TableColumn fx:id="check_classificationColumn" minWidth="100.0" prefWidth="-1.0" text="分类"/>
+                <TableColumn fx:id="check_memoColumn" minWidth="100.0" prefWidth="-1.0" text="备注"/>
+                <TableColumn fx:id="check_dateColumn" minWidth="100.0" prefWidth="-1.0" text="日期"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

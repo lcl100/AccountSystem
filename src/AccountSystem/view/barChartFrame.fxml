@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AccountSystem.controller.BarChartFrameController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="800.0">
+            <children>
+                <ComboBox fx:id="barChart_comboBox" onAction="#barChart_comboBoxEvent" promptText="请选择日期"/>
+            </children>
+        </HBox>
+        <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="74.0" prefHeight="725.0" prefWidth="800.0">
+            <content>
+                <BarChart fx:id="barChart" prefHeight="727.0" prefWidth="799.0">
+                    <xAxis>
+                        <CategoryAxis fx:id="categoryAxis" side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="numberAxis" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
